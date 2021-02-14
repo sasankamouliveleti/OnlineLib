@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OnlineLib</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="brand-logo">OnlineLib</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="register.html">Register Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <div id="login-page" class="row">
+        <h4>Login</h4>
+        <br>
+          <div class="col s12 z-depth-6 card-panel">
+              <br><br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" name='email' />
+                  <label for="email" >Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">lock_outline</i>
+                  <input id="password" type="password" name='pwd'>
+                  <label for="password">Password</label>
+                </div>
+              </div>
+              <p>Note : Please Activate your email using the mail sent and Login</p>
+              <div class="row loginBtn">
+                <button class="btn btn-large btn-register waves-effect waves-light regis col s4" type="submit" name="action" onclick="login()">Login
+                </button>
+              </div>
+          </div>
+        </div>
+
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">OnlineLib</h5>
+                    <p class="grey-text text-lighten-4">~One Stop Destination for all your book needs</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Quick Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/frontend/templates/register.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

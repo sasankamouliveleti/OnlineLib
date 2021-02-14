@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OnlineLib</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+<body onload="renderItems()">
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">OnlineLib</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <div class="searchBar">
+        <input type="text" id="txtSearch" onkeyup="filter()" onfocus="clearBooks()" placeholder="Search Book" />
+    </div>
+    <div id="books">
+    </div>
+    <div id="booksFilter">
+    </div>
+    <script id="handlebars-demo" type="text/x-handlebars-template">
+        <div class="container">
+        <div class="col s12 m7">
+            <div class="row">
+            {{#each books}}
+            <h5 class="heading">{{genreVal}}</h5>
+            <br>
+            {{#each bookNames}}
+                <div class="col s4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="{{image}}" width="200px" height="300px">
+                      <span class="card-title">{{title}}</span>
+                    </div>
+                    <div class="card-content">
+                      <a href="{{booklink}}" target="_blank"">Read</a>
+                    </div>
+                  </div>
+                </div>
+                {{/each}}
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                {{/each}}
+              </div>
+            
+          </div>
+        </div>
+    </script>
+    <script id="handlebars" type="text/x-handlebars-template">
+        <div class="container">
+        <div class="col s12 m7">
+            <div class="row">
+            {{#each books}}
+            <div id="{{title}}">
+                <div class="col s4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="{{image}}" width="200px" height="300px">
+                      <span class="card-title">{{title}}</span>
+                    </div>
+                    <div class="card-content">
+                      <a href="{{booklink}}" target="_blank"">Read</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                {{/each}}
+              </div>
+            
+          </div>
+        </div>
+    </script>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">OnlineLib</h5>
+                    <p class="grey-text text-lighten-4">~One Stop Destination for all your book needs</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Quick Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="upload.html">Upload</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

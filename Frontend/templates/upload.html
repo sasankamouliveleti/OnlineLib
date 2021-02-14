@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OnlineLib</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="main.html" class="brand-logo">OnlineLib</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="main.html">Dashboard</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <div class="container">
+        <div class="row card-panel registerForm">
+                <h4>Please fill the details of book</h4>
+                <br>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="bookName" type="text"/>
+                        <label for="bookName">Book Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="genre" type="text" name='genre' />
+                        <label for="genre">Genre</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="booklink" type="text" />
+                        <label for="booklink">Link</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input id="image" type="text"/>
+                        <label for="image">Book Image Url</label>
+                    </div>
+                </div>
+                <div class="row enter_home">
+                    <div class="input-field col s6">
+                        <button class="btn btn-large btn-register waves-effect waves-light regis" type="submit"
+                            name="action" onclick="upload()">Upload
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">OnlineLib</h5>
+                    <p class="grey-text text-lighten-4">~One Stop Destination for all your book needs</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Quick Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="main.html">Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
